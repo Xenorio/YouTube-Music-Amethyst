@@ -1,0 +1,66 @@
+/* ==UserStyle==
+@name           YTMusic Amethyst
+@namespace      https://github.com/Xenorio/YouTube-Music-Amethyst
+@version        1.0.0
+@description    Purple theme for YouTube Music
+@license		AGPL-3.0-or-later
+@author         xenorio
+@updateURL		https://github.com/Xenorio/YouTube-Music-Amethyst/raw/main/ytm-amethyst.user.css
+==/UserStyle== */
+
+/**
+ * Copyright (C) 2023 Marcus Huber (xenorio) <dev@xenorio.xyz>
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+ @-moz-document domain("music.youtube.com") {
+
+	:root {
+		--color-background: rgb(28, 0, 40);
+		--color-background-accent: rgb(35, 4, 49);
+		--color-accent: rgb(177, 35, 145);
+	}
+
+	ytmusic-player {
+		color: var(--color-accent);
+	}
+
+	#progress-bar.ytmusic-player-bar {
+		--paper-slider-active-color: var(--color-accent);
+		--paper-slider-knob-color: var(--color-accent) !important;
+	}
+
+	ytmusic-player-bar,
+	ytd-multi-page-menu-renderer,
+	ytmusic-nav-bar,
+	tp-yt-paper-listbox,
+	#sections,
+	#mini-guide
+	{
+		background: var(--color-background-accent);
+	}
+
+	.ytmusic-player-page,
+	ytmusic-section-list-renderer,
+	ytd-active-account-header-renderer
+	{
+		background: var(--color-background);
+	}
+
+	.logo {
+		filter: hue-rotate(-85deg);
+	}
+	
+}
